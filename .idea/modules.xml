@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/foxsport.iml" filepath="$PROJECT_DIR$/foxsport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reza-kotlin-dagger2-rx-retrofit-gson.iml" filepath="$PROJECT_DIR$/reza-kotlin-dagger2-rx-retrofit-gson.iml" />
     </modules>
   </component>
 </project>
