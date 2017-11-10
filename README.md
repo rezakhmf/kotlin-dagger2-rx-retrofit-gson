@@ -13,7 +13,7 @@ This project is done in Kotlin with respectful to Clean Architecture
 Kotlin
 
 
-![Top Players](https://github.com/rezakhmf/kotlin-dagger2-rx-retrofit-gson/blob/master/top-players.png)
+![Top Players](https://github.com/rezakhmf/kotlin-dagger2-rx-retrofit-gson/blob/master/topplayers.png)
 
 
 ### Installing
