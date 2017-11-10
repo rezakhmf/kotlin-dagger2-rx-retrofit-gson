@@ -45,7 +45,7 @@ class MatchesAdapter(callback: Callback) : RecyclerView.Adapter<MatchesAdapter.I
                 .into(holder?.matchPalyerAImage)
 
         holder?.matchPalyerAShortName?.text = matches?.get(position)?.getTeamA()?.getTopPlayers()?.get(position)?.getShortName()
-        holder?.matchPalyerAJumpoerName?.text = matches?.get(position)?.getTeamA()?.getTopPlayers()?.get(position)?.getJumperNumber().toString()
+        holder?.matchPalyerAJumperNumber?.text = matches?.get(position)?.getTeamA()?.getTopPlayers()?.get(position)?.getJumperNumber().toString()
         holder?.matchPalyerAPosition?.text = matches?.get(position)?.getTeamA()?.getTopPlayers()?.get(position)?.getPosition()
 
 
@@ -59,7 +59,7 @@ class MatchesAdapter(callback: Callback) : RecyclerView.Adapter<MatchesAdapter.I
                 .into(holder?.matchPalyerBImage)
 
         holder?.matchPalyerBShortName?.text = matches?.get(position)?.getTeamB()?.getTopPlayers()?.get(position)?.getShortName()
-        holder?.matchPalyerBJumpoerName?.text = matches?.get(position)?.getTeamB()?.getTopPlayers()?.get(position)?.getJumperNumber().toString()
+        holder?.matchPalyerBJumperNumber?.text = matches?.get(position)?.getTeamB()?.getTopPlayers()?.get(position)?.getJumperNumber().toString()
         holder?.matchPalyerBPosition?.text = matches?.get(position)?.getTeamB()?.getTopPlayers()?.get(position)?.getPosition()
 
         holder?.itemView?.setOnClickListener({ view ->
@@ -73,7 +73,7 @@ class MatchesAdapter(callback: Callback) : RecyclerView.Adapter<MatchesAdapter.I
         if(matches != null) {
             return matches?.size!!
         } else
-        return 1
+            return 1
     }
 
     fun updateMatches(matches: MutableList<Match>?) {
@@ -89,14 +89,14 @@ class MatchesAdapter(callback: Callback) : RecyclerView.Adapter<MatchesAdapter.I
         var matchStatType = view.tv_statType
 
         var matchPalyerAImage = view.iv_palyerA
-        var matchPalyerAShortName = view.tv_palyerBJumperName
-        var matchPalyerAJumpoerName = view.tv_palyerAJumperName
+        var matchPalyerAShortName = view.tv_palyerAShortName
+        var matchPalyerAJumperNumber = view.tv_palyerAJumperNumber
         var matchPalyerAPosition = view.tv_palyerAPosition
 
         var matchPalyerBImage = view.iv_palyerB
-        var matchPalyerBShortName = view.tv_palyerBJumperName
-        var matchPalyerBJumpoerName = view.tv_palyerBJumperName
+        var matchPalyerBShortName = view.tv_palyerBShortName
+        var matchPalyerBJumperNumber = view.tv_palyerBJumperNumber
         var matchPalyerBPosition = view.tv_palyerBPosition
-        }
+    }
 
 }
