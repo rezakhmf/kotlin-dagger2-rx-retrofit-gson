@@ -13,7 +13,7 @@ This project is done in Kotlin with respectful to Clean Architecture
 Kotlin
 
 ```
-![Alt text](/rezakhmf/kotlin-dagger2-rx-retrofit-gson/blob/master/top-players.png"Top Players")
+![Top Players](/rezakhmf/kotlin-dagger2-rx-retrofit-gson/blob/master/top-players.png)
 ```
 
 ### Installing
