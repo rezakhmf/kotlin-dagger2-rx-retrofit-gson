@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+def libs = rootProject.ext.libraries
+def testLibs = rootProject.ext.testingLibraries
+def config = rootProject.ext.configuration
+def final circleBuild = System.getenv("CI") == "true"
+def final preDexEnabled = "true" == System.getProperty("pre-dex", "true") && !circleBuild
+def final dexInProcessEnabled = "true" == System.getProperty("dex-in-process", "true") && !circleBuild
+
+android {
+    compileSdkVersion config.compileVersion
+    buildToolsVersion config.buildToolsVersion
+    defaultConfig {
+        applicationId config.applicationId
+        minSdkVersion config.minSdk
+        targetSdkVersion config.targetSdk
+        multiDexEnabled true
+        versionCode config.versionCode
+        versionName config.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+        preDexLibraries preDexEnabled
+        dexInProcess = dexInProcessEnabled
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //android
+    implementation "com.android.support:appcompat-v7:${libs.supportVersion}"
+    implementation "com.android.support:design:${libs.supportVersion}"
+    implementation "com.android.support:support-v4:${libs.supportVersion}"
+    implementation "com.android.support.constraint:constraint-layout:${libs.constraintLayoutVersion}"
+    implementation "com.android.support:recyclerview-v7:${libs.supportVersion}"
+
+    // Dependency Injection
+    implementation "com.google.dagger:dagger:${libs.daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${libs.daggerVersion}"
+    kapt "com.google.dagger:dagger-compiler:${libs.daggerVersion}"
+    kapt "com.google.dagger:dagger-android-processor:${libs.daggerVersion}"
+
+    // Auto factory for Assisted Injection
+    annotationProcessor "com.google.auto.factory:auto-factory:${libs.autoFactoryVersion}"
+    provided "com.google.auto.factory:auto-factory:${libs.autoFactoryVersion}"
+
+    // Retrofit 2
+    implementation "com.squareup.retrofit2:retrofit:${libs.retrofit2Version}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${libs.retrofit2Rxjava2Version}"
+    //implementation "com.squareup.retrofit2:converter-jackson:${libs.retrofit2converterJacksonVersion}"
+    implementation "com.squareup.retrofit2:converter-gson:${libs.retrofit2converterJacksonVersion}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${libs.loggingInterceptorVersion}"
+
+    // Rx
+    implementation "io.reactivex.rxjava2:rxjava:${libs.rx2javaVersion}"
+    implementation "io.reactivex.rxjava2:rxandroid:${libs.rxandroidVersion}"
+    implementation "io.reactivex.rxjava2:rxkotlin:${libs.rxKotlinVersion}"
+
+    // Glide
+    compile "com.github.bumptech.glide:glide:${libs.glideVersion}"
+    compile "com.github.bumptech.glide:okhttp3-integration:${libs.glideOkhttp3Version}"
+
+    // test
+    testImplementation "junit:junit:${testLibs.junit}"
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:${testLibs.espressoCore}", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+}

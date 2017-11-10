@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="org.eclipse.equinox:org.eclipse.equinox.registry:3.5.101@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.equinox/org.eclipse.equinox.registry/3.5.101/eac5aeb82732847bc7f11e2b5c934004c4c7a543/org.eclipse.equinox.registry-3.5.101.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.equinox/org.eclipse.equinox.registry/3.5.101/244e0030d5449b4303dacd30ac8d7d1bd4e0e261/org.eclipse.equinox.registry-3.5.101-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

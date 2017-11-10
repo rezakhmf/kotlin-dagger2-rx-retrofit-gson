@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="org.eclipse.core:org.eclipse.core.expressions:3.4.300@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.core/org.eclipse.core.expressions/3.4.300/42b2139abd5638730db317a51949dac3b8d81492/org.eclipse.core.expressions-3.4.300.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.core/org.eclipse.core.expressions/3.4.300/aff028ebea373d3c493384b9af9fb93a2b0bee70/org.eclipse.core.expressions-3.4.300-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

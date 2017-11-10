@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_palyerA"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="TextView"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--app:layout_constraintTop_toTopOf="@id/tv_matchName"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="32dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"/>-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_palyerA"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:scaleType="fitXY"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/tv_palyerA"-->
+        <!--app:layout_constraintLeft_toLeftOf="@id/tv_palyerA" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_palyerB"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="TextView"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--app:layout_constraintTop_toTopOf="@id/tv_matchName"-->
+        <!--app:layout_constraintBaseline_toBaselineOf="@id/tv_palyerA"-->
+        <!--app:layout_constraintRight_toRightOf="parent"/>-->
+
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_palyerB"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:scaleType="fitXY"-->
+        <!--app:layout_constraintRight_toRightOf="@id/tv_palyerB"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/tv_palyerB" />-->
+</android.support.constraint.ConstraintLayout>

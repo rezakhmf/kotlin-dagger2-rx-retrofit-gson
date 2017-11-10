@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="org.eclipse.equinox:org.eclipse.equinox.preferences:3.4.1@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.equinox/org.eclipse.equinox.preferences/3.4.1/6770649a91266a4a17747b201723a1fea8c8a198/org.eclipse.equinox.preferences-3.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.equinox/org.eclipse.equinox.preferences/3.4.1/aab3cc802bd90321315564b8cce1211bff1a9b82/org.eclipse.equinox.preferences-3.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

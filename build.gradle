@@ -1,0 +1,78 @@
+ext {
+    configuration = [
+            buildToolsVersion   : "26.0.2",
+            compileVersion      : 26,
+            applicationId       : "com.reza.foxsport",
+            minSdk              : 21,
+            targetSdk           : 26,
+            versionCode         : 1,
+            versionName         :"1.0"
+    ]
+}
+
+ext {
+    libraries = [
+            supportVersion                 : "26.1.0",
+            constraintLayoutVersion        : "1.0.2",
+            rx2javaVersion                 : "2.1.0",
+            rxandroidVersion               : "2.0.1",
+            rxKotlinVersion                : "2.1.0",
+            butterknifeVersion             : "8.4.0",
+            butterknifeCompilerVersion     : "8.4.0",
+            retrofit2Version               : "2.3.0",
+            retrofit2Rxjava2Version        : "2.3.0",
+            retrofit2converterJacksonVersion : "2.3.0",
+            glideVersion                   : "3.6.1",
+            glideOkhttp3Version            : "1.4.0@aar",
+            jacksonCoreVersion             : "2.9.0",
+            jacksonAnnotationsVersion      : "2.9.0",
+            jacksonDatabindVersion         : "2.9.0",
+            loggingInterceptorVersion      : "3.4.1",
+            daggerVersion                  : "2.10",
+            daggerCompilerVersion          : "2.10",
+            autoFactoryVersion             : "1.0-beta5",
+            jcipVersion                    : "1.0",
+            jsr250Version                  : "1.0"
+    ]
+}
+
+ext {
+    testingLibraries = [
+            junit               : "4.12",
+            espressoCore       : "3.0.1",
+            androidJUnitRunner  : "1.0.0",
+            junitRules          : "1.0.0",
+            mockitoCore         : "2.7.22",
+            hamcrest            : "1.3",
+            powerMock           : "1.7.0",
+            powermockApiMockito2: "1.7.0"
+    ]
+}
+
+
+
+buildscript {
+    ext.kotlin_version = '1.1.51'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
