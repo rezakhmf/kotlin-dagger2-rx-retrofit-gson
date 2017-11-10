@@ -22,7 +22,7 @@
         android:id="@+id/iv_palyerA"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:scaleType="fitXY"
+        android:scaleType="centerInside"
         app:layout_constraintTop_toBottomOf="@id/tv_statType"
         app:layout_constraintLeft_toLeftOf="parent" />
     <TextView
@@ -61,7 +61,7 @@
         android:id="@+id/iv_palyerB"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:scaleType="fitXY"
+        android:scaleType="centerInside"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_statType" />
     <TextView
